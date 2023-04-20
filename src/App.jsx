@@ -6,8 +6,9 @@ import LoginPage from './pages/LoginPage';
 import Header from './pages/Header';
 import Main from './pages/Main';
 import { toast } from 'react-hot-toast';
-
 import { Toaster } from 'react-hot-toast';
+import ShopPage from './pages/ShopPage';
+import AddShopPage from './pages/AddShopPage';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/add" element={<AddShopPage />} />
         {/* <Route path="/add" element={<AddShopPage />} />
         <Route path="/shop" element={<ShopPage />} /> */}
       </Routes>

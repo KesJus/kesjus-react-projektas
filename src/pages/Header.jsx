@@ -1,57 +1,49 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import './style.scss';
-// import { useAuthCtx } from '../auth/AuthProvider';
-// import Logout from '../auth/Logout';
+import React from "react";
+import { NavLink, Link } from "react-router-dom";
+import "./style.scss";
+import { useAuthCtx } from "../auth/AuthProvider";
+import Logout from "../auth/Logout";
 
 function Header() {
-//   const { isLoggedIn } = useAuthCtx();
-const isLoggedIn=false
+  const { isLoggedIn } = useAuthCtx();
+  // const isLoggedIn=false
   return (
     <header>
       <div className="container">
-        <Link to={'/'} className="">
+        <Link to={"/"} className="">
           <h2>Logo</h2>
         </Link>
+
         <nav>
-          <NavLink className="" to={'/register'}>
-            Register
-          </NavLink>
           {isLoggedIn && (
             <>
-              <NavLink
-                className=""
-                to={'/shop'}
-              >
-                Posts
+              <NavLink className="" to={"/shop"}>
+                Shop
               </NavLink>
-              <NavLink
-                className=""
-                to={'/add'}
-              >
-                Create Post
+              <NavLink className="" to={"/add"}>
+                NewItem
               </NavLink>
-              <NavLink
+
+              {/* <NavLink
                 className=""
                 to={'/register'}
               >
                 Profile
-              </NavLink>
-              <NavLink
-                className=""
-                to={'/login'}
-              >
+              </NavLink> */}
+              <NavLink className="" to={"/login"}>
                 <Logout />
               </NavLink>
             </>
           )}
           {!isLoggedIn && (
-            <NavLink
-              className=""
-              to={'/login'}
-            >
-              Login
-            </NavLink>
+            <>
+              <NavLink className="" to={"/register"}>
+                Register
+              </NavLink>
+              <NavLink className="" to={"/login"}>
+                Login
+              </NavLink>
+            </>
           )}
         </nav>
       </div>
@@ -60,4 +52,3 @@ const isLoggedIn=false
 }
 
 export default Header;
-
