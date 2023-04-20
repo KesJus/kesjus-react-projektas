@@ -5,8 +5,9 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import Header from './pages/Header';
 import Main from './pages/Main';
+import { toast } from 'react-hot-toast';
 
-// import { Toaster } from 'react-hot-toast';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
