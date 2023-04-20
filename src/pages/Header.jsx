@@ -18,10 +18,10 @@ function Header() {
           {isLoggedIn && (
             <>
               <NavLink className="" to={"/shop"}>
-                Shop
+                Shops
               </NavLink>
               <NavLink className="" to={"/add"}>
-                NewItem
+              Add-shop
               </NavLink>
 
               {/* <NavLink

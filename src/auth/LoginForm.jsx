@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import { useAuthState } from "react-firebase-hooks/auth";
 // import firebase from "../firebase";
@@ -11,6 +12,10 @@ function LoginForm({ onLogin }) {
       email: "james@bond.com",
       password: "123456",
     },
+    validationSchema: Yup.object({
+      email: Yup.string().email().required(),
+      password: Yup.string().min(6).trim().required(),
+    }),
     onSubmit: (values) => {
       console.log("Form values:", values);
       onLogin(values);
@@ -64,9 +69,7 @@ function LoginForm({ onLogin }) {
           <div>{formik.errors.password}</div>
         ) : null}
       </div>
-      <button type="submit">
-        Submit
-      </button>
+      <button type="submit">Submit</button>
       {/* <button onClick={handleRegister} type="submit">
         Registruotis
       </button> */}
