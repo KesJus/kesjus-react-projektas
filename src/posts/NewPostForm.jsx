@@ -11,19 +11,24 @@ function NewPostForm({ onNewPost }) {
     initialValues: {
       shopName: 'Shop 1',
       town: 'London',
-      startYear: '',
+      startYear: '2013',
       description: 'Description of shop 1',
       imageUrl: 'https://picsum.photos/id/1/400/300',
-      // tagInput: '',
     },
+    validationSchema: Yup.object({
+      shopName: Yup.string().min(4).trim().required(),
+      town: Yup.string().min(4).trim().required(),
+      startYeard: Yup.number().min(1970).max(2022).required(),
+      description: Yup.string().min(6).trim().required(),
+      imageUrl: Yup.string().min(5).trim().required(),
+    }),
     onSubmit: (values) => {
       const newPost = {
         shopName: values.shopName,
         town: values.town,
-        startYear: Number(new Date(values.startYear)),
+        startYear: Number(values.startYear),
         description: values.description,
         imageUrl: values.imageUrl,
-        // tags: values.tagInput.split(',').map((t) => t.trim()),
         userUid: user.uid,
       };
       console.log('newPost ===', newPost);
@@ -34,7 +39,7 @@ function NewPostForm({ onNewPost }) {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <div className="mb-2">
+      <div className="">
         <label className="form-label" htmlFor="shopName">
           Shop name
         </label>
@@ -47,7 +52,7 @@ function NewPostForm({ onNewPost }) {
           value={formik.values.shopName}
         />
       </div>
-      <div className="mb-2">
+      <div className="">
         <label className="form-label" htmlFor="town">
           Town
         </label>
@@ -60,7 +65,7 @@ function NewPostForm({ onNewPost }) {
           value={formik.values.town}
         />
       </div>
-      <div className="mb-2">
+      <div className="">
         <label className="form-label" htmlFor="startYear">
           Start Year
         </label>
@@ -70,10 +75,14 @@ function NewPostForm({ onNewPost }) {
           name="startYear"
           className="form-control"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           value={formik.values.startYear}
         />
+        {formik.touched.startYear && formik.errors.startYear ? (
+  <div className="invalid-feedback">{formik.errors.startYear}</div>
+) : null}
       </div>
-      <div className="mb-2">
+      <div className="">
         <label className="form-label" htmlFor="description">
           Description
         </label>
@@ -85,7 +94,7 @@ function NewPostForm({ onNewPost }) {
           value={formik.values.description}
         />
       </div>
-      <div className="mb-2">
+      <div className="">
         <label className="form-label" htmlFor="imageUrl">
           Image URL
         </label>
@@ -114,7 +123,7 @@ function NewPostForm({ onNewPost }) {
           />
         </div>
       </div> */}
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="">
         Submit
       </button>
     </form>

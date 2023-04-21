@@ -28,7 +28,7 @@ function LoginPage() {
     <div className="container">
       <h1>Login Page</h1>
       <p>enter, please your</p>
-      {error && <h3>Ivyko klaida</h3>}
+      {error && <h3>not suitable, try again, or register</h3>}
       {loading && <h2>Loading...</h2>}
       {user && <h2>You are logged in as {user.user.email} </h2>}
       {!user && <LoginForm onLogin={loginWithHooks} />}

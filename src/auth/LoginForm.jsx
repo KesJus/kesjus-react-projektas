@@ -70,9 +70,6 @@ function LoginForm({ onLogin }) {
         ) : null}
       </div>
       <button type="submit">Submit</button>
-      {/* <button onClick={handleRegister} type="submit">
-        Registruotis
-      </button> */}
     </form>
   );
 }

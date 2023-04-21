@@ -27,8 +27,8 @@ function RegisterPage() {
   return (
     <div className="container">
       <h1>Register Page</h1>
-      <p>enter, please your</p>
-      {error && <h3>Ivyko klaida</h3>}
+      <p>your</p>
+      {error && <h3>not suitable, try again,</h3>}
       {loading && <h2>Loading...</h2>}
       {user && <h2>You are logged in as {user.user.email} </h2>}
       {!user && <LoginForm onLogin={loginWithHooks} />}
