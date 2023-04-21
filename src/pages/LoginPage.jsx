@@ -26,8 +26,8 @@ function LoginPage() {
   console.log("user ===", user);
   return (
     <div className="container">
-      <h1>Login Page</h1>
-      <p>enter, please your</p>
+      <h1>. . . </h1>
+      <p>Log in to our Shop</p>
       {error && <h3>not suitable, try again, or register</h3>}
       {loading && <h2>Loading...</h2>}
       {user && <h2>You are logged in as {user.user.email} </h2>}

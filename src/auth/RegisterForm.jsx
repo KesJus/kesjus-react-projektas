@@ -65,7 +65,7 @@ function RegisterForm({ onLogin }) {
         ) : null}
       </div>
       <button type="submit">
-        Submit
+      Register
       </button>
       {/* <button onClick={handleRegister} type="submit">
         Registruotis

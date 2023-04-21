@@ -44,7 +44,7 @@ function LoginForm({ onLogin }) {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">email</label>
         <input
           id="email"
           type="text"
@@ -56,7 +56,7 @@ function LoginForm({ onLogin }) {
         {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
       </div>
       <div>
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">password</label>
         <input
           id="password"
           type="password"
@@ -69,7 +69,7 @@ function LoginForm({ onLogin }) {
           <div>{formik.errors.password}</div>
         ) : null}
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">log in</button>
     </form>
   );
 }

@@ -10,8 +10,8 @@ function Header() {
   return (
     <header>
       <div className="container">
-        <Link to={"/"} className="">
-          <h2><img src="./public/mad-frog.webp" alt="logo" style={{ maxHeight: '30px' }} /></h2>
+        <Link to={"/"} className="logos">
+          <img src="./public/mad-frog.webp" alt="logo" style={{ maxHeight: '36px' }} />
         </Link>
 
         <nav>
