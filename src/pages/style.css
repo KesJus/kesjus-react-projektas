@@ -6,14 +6,13 @@
   margin-bottom: 0;
   /* padding: 0; */
 }
-b:hover {
+.mail-to:hover {
   opacity: 0.75;
-  /* background-color: #fff; */
   padding: 3px;
   border-radius: 5px;
 }
-b:hover span {
-  color: #fff !important;
+.mail-to:hover span {
+  color: #ffcd66!important;
 }
 img {
   margin-bottom: -25px;
@@ -47,11 +46,13 @@ footer {
   text-align: center;
   background-color: #2f353c;
   color: #fff;
-  padding: 2rem;
+  padding: .2rem;
   font-size: 1rem;
   position: fixed;
   bottom: 0;
+  left: 0;
   display: block;
   margin: 0 auto;
   width: 100%;
+  
 }

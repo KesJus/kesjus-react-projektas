@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import "./style.scss";
 import { useAuthCtx } from "../auth/AuthProvider";
 import Logout from "../auth/Logout";
+// import Main from "./Main";
 
 function Header() {
   const { isLoggedIn } = useAuthCtx();
@@ -11,7 +12,7 @@ function Header() {
     <header>
       <div className="container">
         <Link to={"/"} className="logos">
-          <img src="./public/mad-frog.webp" alt="logo" style={{ maxHeight: '36px' }} />
+          <img src="./public/mad-frog.webp" alt="logo" style={{ maxHeight: "36px" }} />
         </Link>
 
         <nav>
@@ -21,7 +22,7 @@ function Header() {
                 Shops
               </NavLink>
               <NavLink className="" to={"/add"}>
-              Add-shop
+                Add-shop
               </NavLink>
 
               {/* <NavLink
@@ -40,9 +41,12 @@ function Header() {
               <NavLink className="" to={"/register"}>
                 Register
               </NavLink>
+
               <NavLink className="" to={"/login"}>
                 Login
               </NavLink>
+
+              {/* <Main /> */}
             </>
           )}
         </nav>

@@ -46,7 +46,21 @@ div {
   padding-bottom: 0.7rem;
 }
 button{
-  margin-right: 0.7rem;
+  /* margin-right: 0.7rem; */
+}
+
+input:focus { 
+  outline: none !important;
+  border-color: #719ECE;
+  box-shadow: 0 0 10px #719ECE;
+}
+textarea:focus { 
+  outline: none !important;
+  border-color: #719ECE;
+  box-shadow: 0 0 10px #719ECE;
+}
+h3{
+  color:#ff6966;
 }
 @keyframes logo-spin {
   from {

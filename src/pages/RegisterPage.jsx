@@ -4,6 +4,7 @@ import LoginForm from "../auth/LoginForm";
 import { auth } from "../auth/firebase";
 import { useAuthCtx } from "../auth/AuthProvider";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Main from "./Main";
 
 function RegisterPage() {
   const { login } = useAuthCtx();
@@ -26,7 +27,8 @@ function RegisterPage() {
   console.log("user ===", user);
   return (
     <div className="container">
-      <h1>. . .</h1>
+      <Main />
+      <h2>. . .</h2>
       <p>Don't have an account yet?</p>
       {error && <h3>not suitable, try again,</h3>}
       {loading && <h2>Loading...</h2>}

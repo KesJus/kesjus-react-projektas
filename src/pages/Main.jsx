@@ -1,9 +1,7 @@
-import React from "react";
-// import '../App.css'
+// import React from "react";
 import "./style.css";
 function Main() {
   return (
-    // <div className="App">
     <div className="w3-container">
       <img src="./public/mad-frog.webp" alt="mad frog with pc" />
       <div className="w3-card-4 hov">
@@ -32,7 +30,6 @@ function Main() {
           <span style={{ color: "#ff8600" }}>ų</span>
           <span style={{ color: "#ff8c00" }}>, </span>
         </div>
-
         <div>
           <span style={{ color: " #ff9300" }}>b</span>
           <span style={{ color: " #ff9a00" }}>e</span>
@@ -119,31 +116,29 @@ function Main() {
           <span style={{ color: " #1700ff" }}>s</span>
           <span style={{ color: " #1f00ff" }}>.</span>
         </div>
-
+        
         <div class="w3-container w3-center">
-          {/* <p> */}
           <img src="./public/pin3.webp" style={{ width: "26px", float: "leftt" }} />
-            <a href="mailto:kes_jus@yahoo.com?subject=Domina%20tinklapiai&amp;body=Sveiki%2C%20kreipiuosi%20d%C4%97l%20">
-              <b>
-                <span style={{ color: " #2700ff" }}>S</span>
-                <span style={{ color: " #2e00ff" }}>u</span>
-                <span style={{ color: " #3600ff" }}>s</span>
-                <span style={{ color: " #3e00ff" }}>i</span>
-                <span style={{ color: " #4600ff" }}>s</span>
-                <span style={{ color: " #4d00ff" }}>i</span>
-                <span style={{ color: " #5500ff" }}>e</span>
-                <span style={{ color: " #5d00ff" }}>k</span>
-                <span style={{ color: " #6400ff" }}>i</span>
-                <span style={{ color: " #6c00ff" }}>m</span>
-                <span style={{ color: " #7400ff" }}>e</span>
-                <span style={{ color: " #7c00ff" }}> </span>
-                <span style={{ color: " #8300ff" }}>–</span>
-      <span style={{ color: "#8b00ff" }}>
-        <span style={{ fontSize: '22px' }}>&#128233;</span>
-      </span>
-              </b>
-            </a>
-          {/* </p> */}
+          <a href="mailto:kes_jus@yahoo.com?subject=Domina%20tinklapiai&amp;body=Sveiki%2C%20kreipiuosi%20d%C4%97l%20">
+            <span className="mail-to">
+              <span style={{ color: " #2700ff" }}>S</span>
+              <span style={{ color: " #2e00ff" }}>u</span>
+              <span style={{ color: " #3600ff" }}>s</span>
+              <span style={{ color: " #3e00ff" }}>i</span>
+              <span style={{ color: " #4600ff" }}>s</span>
+              <span style={{ color: " #4d00ff" }}>i</span>
+              <span style={{ color: " #5500ff" }}>e</span>
+              <span style={{ color: " #5d00ff" }}>k</span>
+              <span style={{ color: " #6400ff" }}>i</span>
+              <span style={{ color: " #6c00ff" }}>m</span>
+              <span style={{ color: " #7400ff" }}>e</span>
+              <span style={{ color: " #7c00ff" }}> </span>
+              <span style={{ color: " #8300ff" }}>–</span>
+              <span style={{ color: "#8b00ff" }}>
+                <span style={{ fontSize: "22px" }}>&#128233;</span>
+              </span>
+            </span>
+          </a>
         </div>
       </div>
     </div>

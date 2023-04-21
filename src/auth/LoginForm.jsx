@@ -69,7 +69,7 @@ function LoginForm({ onLogin }) {
           <div>{formik.errors.password}</div>
         ) : null}
       </div>
-      <button type="submit">log in</button>
+      <button type="submit">submit</button>
     </form>
   );
 }

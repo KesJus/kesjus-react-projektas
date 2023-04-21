@@ -4,6 +4,7 @@ import LoginForm from "../auth/LoginForm";
 import { auth } from "../auth/firebase";
 import { useAuthCtx } from "../auth/AuthProvider";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Main from "./Main";
 
 function LoginPage() {
   const { login } = useAuthCtx();
@@ -26,11 +27,11 @@ function LoginPage() {
   console.log("user ===", user);
   return (
     <div className="container">
-      <h1>. . . </h1>
+   <Main /><h2>. . .</h2>
       <p>Log in to our Shop</p>
       {error && <h3>not suitable, try again, or register</h3>}
       {loading && <h2>Loading...</h2>}
-      {user && <h2>You are logged in as {user.user.email} </h2>}
+      {user && <h3>You are logged in as {user.user.email} </h3>}
       {!user && <LoginForm onLogin={loginWithHooks} />}
     </div>
   );

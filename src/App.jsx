@@ -9,12 +9,13 @@ import { toast } from 'react-hot-toast';
 import { Toaster } from 'react-hot-toast';
 import ShopPage from './pages/ShopPage';
 import AddShopPage from './pages/AddShopPage';
+import Footer from './pages/Footer';
 
 function App() {
   return (
     <div className="">
       <Header />
-      <Main />
+      {/* <Main /> */}
       {/* <Toaster /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -22,9 +23,8 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/add" element={<AddShopPage />} />
-        {/* <Route path="/add" element={<AddShopPage />} />
-        <Route path="/shop" element={<ShopPage />} /> */}
       </Routes>
+      <Footer />
     </div>
   );
 }
