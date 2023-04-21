@@ -59,7 +59,9 @@ textarea:focus {
   border-color: #719ECE;
   box-shadow: 0 0 10px #719ECE;
 }
-h3{
+h3
+/* , .form-control */
+{
   color:#ff6966;
 }
 @keyframes logo-spin {

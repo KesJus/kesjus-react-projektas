@@ -14,8 +14,9 @@ function AddShopPage() {
 
   return (
     <div className="container">
-      <h1 className="display-3 mt-3">AddShopPage</h1>
-      <p>This is AddShopPage</p>
+        <h2>. . .</h2>
+      <h2 className="display-3 mt-3">Add Shop Page</h2>
+      <p><em>You can add your implementation here...</em></p>
       <NewPostForm onNewPost={handleNewPost} />
     </div>
   );
