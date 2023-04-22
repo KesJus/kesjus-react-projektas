@@ -4,7 +4,6 @@ import { db } from '../auth/firebase';
 import { toast } from 'react-hot-toast';
 
 function AddShopPage() {
-  //
   function handleNewPost(newPostObj) {
     const hookPostRef = collection(db, 'hookPosts');
     addDoc(hookPostRef, newPostObj).then(() => {

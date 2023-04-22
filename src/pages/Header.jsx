@@ -25,13 +25,7 @@ function Header() {
                 Add-shop
               </NavLink>
 
-              {/* <NavLink
-                className=""
-                to={'/register'}
-              >
-                Profile
-              </NavLink> */}
-              <NavLink className="" to={"/login"}>
+               <NavLink className="" to={"/login"}>
                 <Logout />
               </NavLink>
             </>
