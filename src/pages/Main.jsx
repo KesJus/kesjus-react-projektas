@@ -3,11 +3,11 @@ import "./style.css";
 function Main() {
   return (
     <div className="w3-container">
-      <img src="./public/mad-frog.webp" alt="mad frog with pc" />
+      <img src="/mad-frog.webp" alt="mad frog with pc" />
       <div className="w3-card-4 hov">
         <div>
           <span style={{ fontSize: "26px" }}>&#129489;</span>
-          <img src="./public/pin3.webp" style={{ width: "26px", float: "right" }} />
+          <img src="/pin3.webp" style={{ width: "26px", float: "right" }} />
           <span style={{ color: "#ff0000" }}>O</span>
           <span style={{ color: "#ff0700" }}>r</span>
           <span style={{ color: "#ff0e00" }}>i</span>
@@ -117,8 +117,8 @@ function Main() {
           <span style={{ color: " #1f00ff" }}>.</span>
         </div>
         
-        <div class="w3-container w3-center">
-          <img src="./public/pin3.webp" style={{ width: "26px", float: "leftt" }} />
+        <div className="w3-container w3-center">
+          <img src="/pin3.webp" style={{ width: "26px", float: "leftt" }} />
           <a href="mailto:kes_jus@yahoo.com?subject=Domina%20tinklapiai&amp;body=Sveiki%2C%20kreipiuosi%20d%C4%97l%20">
             <span className="mail-to">
               <span style={{ color: " #2700ff" }}>S</span>

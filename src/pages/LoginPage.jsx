@@ -12,10 +12,11 @@ function LoginPage() {
   const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
   function loginWithHooks({ email, password }) {
-    console.log("login success!! ----------------");
+
     const rez = signInWithEmailAndPassword(email, password).then(() => {
       toast.success("Login success");
     });
+    
     // console.log('rez ===', rez);
     // toast.promise(rez, {
     //   loading: 'Loading',
@@ -24,14 +25,14 @@ function LoginPage() {
     // });
   }
 
-  console.log("user ===", user);
+  // console.log("user ===", user);
   return (
     <div className="container">
    <Main /><h2>. . .</h2>
       <p>Log in to our Shop</p>
       {error && <h3>not suitable, try again, or register</h3>}
       {loading && <h2>Loading...</h2>}
-      {user && <h3>You are logged in as {user.user.email} </h3>}
+      {user && <h4>You are logged in as {user.user.email} </h4>}
       {!user && <LoginForm onLogin={loginWithHooks} />}
     </div>
   );

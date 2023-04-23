@@ -1,7 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
 import { useAuthCtx } from "../auth/AuthProvider";
 
 function NewPostForm({ onNewPost }) {
@@ -75,14 +74,14 @@ function NewPostForm({ onNewPost }) {
         {formik.touched.town && formik.errors.town && <ErrorMsg>{formik.errors.town}</ErrorMsg>}
       </div>
       <div className="">
-        <label className="form-label" htmlFor="startYear">
+        <label className="form-label form-input" htmlFor="startYear">
           Start Year&nbsp;
         </label>
         <input
           type="number"
           id="startYear"
           name="startYear"
-          className="form-control"
+          className="form-control form-input"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.startYear}

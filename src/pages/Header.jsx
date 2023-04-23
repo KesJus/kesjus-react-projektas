@@ -1,18 +1,17 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import "./style.scss";
 import { useAuthCtx } from "../auth/AuthProvider";
 import Logout from "../auth/Logout";
-// import Main from "./Main";
+import "./style.scss";
 
 function Header() {
   const { isLoggedIn } = useAuthCtx();
   // const isLoggedIn=false
   return (
     <header>
-      <div className="container">
+      <div className="container nav-link">
         <Link to={"/"} className="logos">
-          <img src="./public/mad-frog.webp" alt="logo" style={{ maxHeight: "36px" }} />
+          <img src="/mad-frog.webp" alt="logo" style={{ maxHeight: "38px" }} />
         </Link>
 
         <nav>
@@ -21,11 +20,12 @@ function Header() {
               <NavLink className="" to={"/shop"}>
                 Shops
               </NavLink>
+              
               <NavLink className="" to={"/add"}>
                 Add-shop
               </NavLink>
 
-               <NavLink className="" to={"/login"}>
+              <NavLink className="" to={"/login"}>
                 <Logout />
               </NavLink>
             </>
@@ -39,8 +39,6 @@ function Header() {
               <NavLink className="" to={"/login"}>
                 Login
               </NavLink>
-
-              {/* <Main /> */}
             </>
           )}
         </nav>

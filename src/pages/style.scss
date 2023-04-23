@@ -2,11 +2,11 @@ header,
 footer {
   // background-color: rgba(0, 128, 0, 0.993);
   // background-color: rgb(69 74 69 / 99%);
-  
-  // Register --hos-color-amber-050: #ffae00;     
+
+  // Register --hos-color-amber-050: #ffae00;
   // Required field --hos-color-red-070: #ff6966;
 
-  background-color: #2f353c;;
+  background-color: #2f353c;
   color: #eee;
 
   .container {
@@ -21,7 +21,7 @@ footer {
   }
   .navItem {
     padding: 0.7em 1em;
- 
+
     display: inline-block;
   }
   .navItem.active {
@@ -32,12 +32,23 @@ footer {
   }
   // h2 {
   //   // color: yellow;
-  //   color: #ffae00; 
-  //   color: #ffd500; 
+  //   color: #ffae00;
+  //   color: #ffd500;
   // }
 
   a {
     // padding-left: 1rem;
-    padding: .6rem;
+    padding: 0.6rem;
+  }
+}
+.grid-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media only screen and (max-width: 540px) {
+  nav {
+    display: flex !important;
+    flex-direction: column-reverse !important;
   }
 }

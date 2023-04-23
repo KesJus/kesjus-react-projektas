@@ -12,9 +12,9 @@ function RegisterForm({ onLogin }) {
       password: "123456",
     },
     onSubmit: (values) => {
-      console.log("Form values:", values);
+      console.log("Form values for register:", values);
       onLogin(values);
-      // toast.success('Login success');
+      toast.success('Register success');
     },
   });
 
@@ -24,7 +24,7 @@ function RegisterForm({ onLogin }) {
   //   // <button onClick={handlePassword} type="submit"></button>
   // }
 
-  function handleLogin() {
+  function handleSubmit() {
     // const auth = firebase.auth();
     // const [user, loading, error] = useAuthState(auth);
     // if (loading) {
