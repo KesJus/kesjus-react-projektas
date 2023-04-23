@@ -9,14 +9,14 @@ import Main from "./Main";
 function LoginPage() {
   const { login } = useAuthCtx();
 
-  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
 
   function loginWithHooks({ email, password }) {
-
     const rez = signInWithEmailAndPassword(email, password).then(() => {
       toast.success("Login success");
     });
-    
+
     // console.log('rez ===', rez);
     // toast.promise(rez, {
     //   loading: 'Loading',
@@ -28,8 +28,9 @@ function LoginPage() {
   // console.log("user ===", user);
   return (
     <div className="container">
-   <Main /><h2>. . .</h2>
-      <p>Log in to our Shop</p>
+      <Main /><div className="head">
+      <h2>. . .</h2>
+      <p>Log in to our Shop</p></div>
       {error && <h3>not suitable, try again, or register</h3>}
       {loading && <h2>Loading...</h2>}
       {user && <h4>You are logged in as {user.user.email} </h4>}

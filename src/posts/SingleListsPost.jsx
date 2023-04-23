@@ -12,15 +12,15 @@ import { useCollection } from "react-firebase-hooks/firestore";
 
 function SingleListsPost({ item }) {
   // parsiusti postus
-  const postCollRef = collection(db, "shops");
+  const postCollRef = collection(db, "hookPosts");
   const q = query(postCollRef, orderBy("town", "desc"));
   const [value, loading, error] = useCollection(q);
-  console.log("value ===", value);
+  // console.log("value ===", value);
   const docsWithUid = value && value.docs.map((doc) => ({ uid: doc.id, ...doc.data() }));
   useEffect(() => {}, []);
   console.log("docsWithUid ===", docsWithUid);
   return (
-    <div className="card">
+    <div className="">
       {loading && <h2>Loading...</h2>}
       <ul className="grid-3">
         {value &&
@@ -28,7 +28,7 @@ function SingleListsPost({ item }) {
             <li key={pObj?.uid}>
               <img src={pObj.imageUrl} className="card-img-top w-50" alt="..." />
               <p>{pObj?.imageUrl}</p>
-              <h2>{pObj?.shopName}</h2>
+              <h1>{pObj?.shopName}</h1>
               <em>{pObj?.description}</em>
               <p>
                 {pObj?.town}, {pObj.startYear}

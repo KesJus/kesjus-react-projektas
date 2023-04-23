@@ -29,9 +29,9 @@ function RegisterPage() {
   
   return (
     <div className="container">
-      <Main />
+      <Main /><div className="head">
       <h2>. . .</h2>
-      <p>Don't have an account yet?</p>
+      <p>Don't have an account yet?</p></div>
       {error && <h3>not suitable, try again,</h3>}
       {loading && <h2>Loading...</h2>}
       {user && <h4>You are logged in as {user.user.email} </h4>}

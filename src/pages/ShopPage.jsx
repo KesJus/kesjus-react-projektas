@@ -57,6 +57,7 @@ function ShopPage() {
       >
         kazkas
       </button> */}
+
       <ul className="list-group">
         {value &&
           docsWithUid.map((pObj) => (
@@ -65,6 +66,7 @@ function ShopPage() {
             </li>
           ))}
       </ul>
+      
     </div>
   );
 }

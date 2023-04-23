@@ -18,7 +18,8 @@ a,
 footer {
   font-weight: 500;
   /* color: #646cff; */
-  color: yellow;
+  /* color: yellow; */
+  color: #ffd500;
   /* color: #ffae00; ; */
   text-decoration: inherit;
 }
@@ -51,7 +52,8 @@ body {
 
 h1 {
   /* font-size: 3.2em; */
-  font-size: 1.6em;
+  font-size: 1.4em;
+  font-weight: 500;
   line-height: 1.1;
 }
 
