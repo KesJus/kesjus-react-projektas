@@ -15,8 +15,8 @@ function AddShopPage() {
   return (
     <div className="container">
       <div className="head">
-        <h2>. . .</h2>
-        <div className="head">
+       <div> <h2>. . .</h2>
+        
           <h2 className="display-3 mt-3">Add Shop Page</h2>
         </div>
 

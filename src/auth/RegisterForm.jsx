@@ -2,10 +2,11 @@ import React from "react";
 import { useFormik } from "formik";
 
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-hot-toast";
 // import firebase from "../firebase";
 // import "firebase/auth";
 
-function RegisterForm({ onLogin }) {
+function RegisterForm({ onSubmit }) {
   const formik = useFormik({
     initialValues: {
       email: "james@bond.com",
@@ -13,7 +14,7 @@ function RegisterForm({ onLogin }) {
     },
     onSubmit: (values) => {
       console.log("Form values for register:", values);
-      onLogin(values);
+      onSubmit(values);
       toast.success('Register success');
     },
   });
@@ -53,6 +54,7 @@ function RegisterForm({ onLogin }) {
       <div>
         <label htmlFor="password">Password</label>
         <input
+        className="form-input"
           id="password"
           type="password"
           name="password"

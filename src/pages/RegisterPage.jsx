@@ -1,47 +1,42 @@
 // import { signInWithEmailAndPassword } from 'firebase/auth';
-import { toast } from "react-hot-toast";
+// import { toast } from "react-hot-toast";
 import { auth } from "../auth/firebase";
 import { useAuthCtx } from "../auth/AuthProvider";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Main from "./Main";
 import RegisterForm from "../auth/RegisterForm";
 import { useState } from "react";
+import { collection, doc, setDoc } from "firebase/firestore";
+// import { collection, doc, setDoc } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+// import { Toast } from "react-hot-toast";
+// import { useState } from "react";
+// import { auth } from "../auth/firebase";
+// import { collection, addDoc } from "firebase/firestore";
+// import RegisterForm from "../auth/RegisterForm";
 
 function RegisterPage() {
-  const { login } = useAuthCtx();
+  const [error, setError] = useState("");
 
-  // const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-  const [email, setEmail] = useState("");
-  
-  const [createUserWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-
-  function registerWithHooks({ email, password }) {
-
-    const rez = createUserWithEmailAndPassword(email, password).then(() => {
-      toast.success("Register success");
-    });
-    console.log('rez ===', rez);
-    // debugger
-    toast.promise(rez, {
-      loading: 'Loading',
-      success: 'Login success',
-      error: 'Error when registering',
-    });
+  async function onSubmit(email, password) {
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(email, password);
+      await addDoc(collection(db, "users"), { email: user.email, uid: user.uid });
+    } catch (error) {
+      // setError(error.message);
+      setError('user was not registered');
+      // toast.error("Login error");
+    }
   }
 
-  console.log("user ===", user);
-  
   return (
-    <div className="container">
-      <Main /><div className="head">
-      <h2>. . .</h2>
-      <p>Don't have an account yet?</p></div>
-      {error && <h3>not suitable, try again,</h3>}
-      {loading && <h2>Loading...</h2>}
-      {user && <h4>You are logged in as {user.user.email} </h4>}
-      {!user && <RegisterForm onLogin={registerWithHooks} />}
+    <div>
+      <h1>Register</h1>
+      {error && <div className="error">{error}</div>}
+      <RegisterForm onSubmit={onSubmit} />
     </div>
   );
 }
 
 export default RegisterPage;
+

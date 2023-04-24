@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import { useAuthState } from "react-firebase-hooks/auth";
-// import firebase from "../firebase";
+// import firebase from "../firvaluesebase";
 // import "firebase/auth";
 
 function LoginForm({ onLogin }) {
@@ -23,25 +23,7 @@ function LoginForm({ onLogin }) {
     },
   });
 
-  // function handleRegister() {
-  //   console.log("pakartokite slaptažodį");
-  //   return;
-  //   // <button onClick={handlePassword} type="submit"></button>
-  // }
-
-  function handleLogin() {
-    // const auth = firebase.auth();
-    // const [user, loading, error] = useAuthState(auth);
-    // if (loading) {
-    //   return <p>Loading...</p>;
-    // }
-
-    // if (error) {
-    //   return
-    console.log("autentifikuojame...");
-  }
-
-  return (
+   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
         <label htmlFor="email">email</label>

@@ -12,7 +12,7 @@ function Logout() {
 
   return !isLoggedIn ? null : (
     // <button className="btn btn-outline-info" onClick={logoutFire}>
-    <button className="btn btn-outline-info" onClick={logoutFire}>
+    <button className="btn btn-outline-info logout" onClick={logoutFire}>
       Logout
     </button>
   );
