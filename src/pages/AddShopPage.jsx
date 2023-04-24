@@ -1,14 +1,14 @@
-import { addDoc, collection } from '@firebase/firestore';
-import NewPostForm from '../posts/NewPostForm';
-import { db } from '../auth/firebase';
-import { toast } from 'react-hot-toast';
+import { addDoc, collection } from "@firebase/firestore";
+import NewPostForm from "../posts/NewPostForm";
+import { db } from "../auth/firebase";
+import { toast } from "react-hot-toast";
 
 function AddShopPage() {
   function handleNewPost(newPostObj) {
-    const shopsRef = collection(db, 'hookPosts');
-    // const shopsRef = collection(db, 'shops');
+    // const shopsRef = collection(db, 'hookPosts');
+    const shopsRef = collection(db, "shops");
     addDoc(shopsRef, newPostObj).then(() => {
-      toast.success('doc created');
+      toast.success("doc created");
     });
   }
 
@@ -17,9 +17,13 @@ function AddShopPage() {
       <div className="head">
         <h2>. . .</h2>
         <div className="head">
-      <h2 className="display-3 mt-3">Add Shop Page</h2></div>
+          <h2 className="display-3 mt-3">Add Shop Page</h2>
+        </div>
 
-      <p><em>You can add your implementation here...</em></p></div>
+        <p>
+          <em>You can add your implementation here...</em>
+        </p>
+      </div>
       <NewPostForm onNewPost={handleNewPost} />
     </div>
   );

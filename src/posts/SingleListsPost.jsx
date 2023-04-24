@@ -12,7 +12,10 @@ import { useCollection } from "react-firebase-hooks/firestore";
 
 function SingleListsPost({ item }) {
   // parsiusti postus
-  const postCollRef = collection(db, "hookPosts");
+  // const postCollRef = collection(db, "posts");
+  const postCollRef = collection(db, "shops");
+  // rodo tik i6 hook Posts
+  // const postCollRef = collection(db, "hookPosts");
   const q = query(postCollRef, orderBy("town", "desc"));
   const [value, loading, error] = useCollection(q);
   // console.log("value ===", value);
