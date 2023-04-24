@@ -5,19 +5,23 @@ import { useAuthCtx } from "../auth/AuthProvider";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Main from "./Main";
 import RegisterForm from "../auth/RegisterForm";
+import { useState } from "react";
 
 function RegisterPage() {
   const { login } = useAuthCtx();
 
-  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  // const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [email, setEmail] = useState("");
+  
+  const [createUserWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
 
   function registerWithHooks({ email, password }) {
 
-    const rez = signInWithEmailAndPassword(email, password).then(() => {
+    const rez = createUserWithEmailAndPassword(email, password).then(() => {
       toast.success("Register success");
     });
     console.log('rez ===', rez);
-    debugger
+    // debugger
     toast.promise(rez, {
       loading: 'Loading',
       success: 'Login success',

@@ -6,6 +6,7 @@ import { toast } from 'react-hot-toast';
 function AddShopPage() {
   function handleNewPost(newPostObj) {
     const shopsRef = collection(db, 'hookPosts');
+    // const shopsRef = collection(db, 'shops');
     addDoc(shopsRef, newPostObj).then(() => {
       toast.success('doc created');
     });

@@ -60,7 +60,7 @@ ul{
   }
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 440px) {
   nav {
     display: flex !important;
     flex-direction: column-reverse !important;
@@ -69,17 +69,21 @@ ul{
     padding: 0;
   }
 
-}
-@media only screen and (max-width: 360px) {
+// }
+// @media only screen and (max-width: 360px) {
   nav {
     display: flex !important;
     flex-direction: column-reverse !important;
   }
-  .head{
+  // .head
+  .w3-container
+  {
     display: none;
   }
   .hov{
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   li > img{width:75%}
+  .container{padding: 0;}
 }

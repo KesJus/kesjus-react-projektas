@@ -16,7 +16,7 @@ function ShopPage() {
   const [filerVal, setFilerVal] = useState('all');
   // parsiusti postus
   // const postCollRef = collection(db, 'hookPosts');
-  const postCollRef = collection(db, 'hookPosts');
+  const postCollRef = collection(db, 'posts');
 
   // const q = query(postCollRef, orderBy('author', 'desc'));
   const q =

@@ -15,7 +15,7 @@ import Loader from '../ui/loader/Loader';
 function ShopsPage() {
   const [filerVal, setFilerVal] = useState('all');
   // parsiusti postus
-  const postCollRef = collection(db, 'hookPosts');
+  const postCollRef = collection(db, 'shops');
   // const postCollRef = collection(db, 'posts');
 console.log('postCollRef ===', postCollRef);
   // const q = query(postCollRef, orderBy('author', 'desc'));
