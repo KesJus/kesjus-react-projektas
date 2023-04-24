@@ -11,7 +11,7 @@ function Header() {
     <header>
       <div className="container nav-link">
         <Link to={"/"} className="logos">
-          <img src="/mad-frog.webp" alt="logo" style={{ maxHeight: "38px" }} />
+          <img src="/mad-frog.webp" alt="logo" className="logo-top" style={{ maxHeight: "38px" }} />
         </Link>
 
         <nav>

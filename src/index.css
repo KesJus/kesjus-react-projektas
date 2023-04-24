@@ -32,6 +32,9 @@ a:not(.logos):hover {
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
 }
+.logos{
+  margin-bottom: -22px;
+}
 input:focus {
   outline: none !important;
   border-color: #719ece;
