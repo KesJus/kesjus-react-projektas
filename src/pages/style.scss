@@ -83,6 +83,21 @@ ul {
     padding-top:2px;
     padding-bottom:2px;
   }
+  // .w3-container {
+  //   max-width: 280px;
+  //   /* max-height:auto; */
+  //   display: block;
+  //   margin: 0 auto;
+  //   width: 100%;
+  //   transform: translateY(14%);
+  // }
+  .w3-container img{
+    display: none;
+  }
+ .form-control, .inputs-pd{
+    padding: 0;
+  }
+ 
   // }
   // @media only screen and (max-width: 360px) {
   nav {

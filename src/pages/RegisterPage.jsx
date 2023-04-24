@@ -31,7 +31,9 @@ function RegisterPage() {
 
   return (
     <div>
-      <h1>Register</h1>
+<div className="head">
+        <h2>. . .</h2> </div>
+      <h4><em>Don't have an account yet?</em></h4>
       {error && <div className="error">{error}</div>}
       <RegisterForm onSubmit={onSubmit} />
     </div>

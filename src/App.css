@@ -67,6 +67,7 @@ h3
 /* loadin */
 h4, .text{
   color: #719ECE;
+  font-weight: normal;
 }
 
 @keyframes logo-spin {

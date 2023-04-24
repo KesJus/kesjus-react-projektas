@@ -1,10 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-
-import { useAuthState } from "react-firebase-hooks/auth";
-// import firebase from "../firvaluesebase";
-// import "firebase/auth";
+// import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-hot-toast";
 
 function LoginForm({ onLogin }) {
   const formik = useFormik({
@@ -19,11 +17,11 @@ function LoginForm({ onLogin }) {
     onSubmit: (values) => {
       console.log("Form values:", values);
       onLogin(values);
-      // toast.success('Login success');
+      toast.success("Login success");
     },
   });
 
-   return (
+  return (
     <form onSubmit={formik.handleSubmit}>
       <div>
         <label htmlFor="email">email</label>
@@ -51,7 +49,9 @@ function LoginForm({ onLogin }) {
           <div>{formik.errors.password}</div>
         ) : null}
       </div>
-      <button type="submit">submit</button>
+      <button type="submit" className="sign">
+        submit
+      </button>
     </form>
   );
 }

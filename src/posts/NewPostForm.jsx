@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useAuthCtx } from "../auth/AuthProvider";
-
+import './form.css'
 function NewPostForm({ onNewPost }) {
   const { user } = useAuthCtx();
   const ErrorMsg = "error";
@@ -41,7 +41,7 @@ function NewPostForm({ onNewPost }) {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <div className="">
+      <div className="inputs-pd">
         <label className="form-label" htmlFor="shopName">
           Shop Name&nbsp;
         </label>
@@ -58,7 +58,7 @@ function NewPostForm({ onNewPost }) {
           <ErrorMsg>{formik.errors.shopName}</ErrorMsg>
         )}
       </div>
-      <div className="">
+      <div className="inputs-pd">
         <label className="form-label" htmlFor="town">
           Town&nbsp;
         </label>
@@ -73,7 +73,7 @@ function NewPostForm({ onNewPost }) {
         />
         {formik.touched.town && formik.errors.town && <ErrorMsg>{formik.errors.town}</ErrorMsg>}
       </div>
-      <div className="">
+      <div className="inputs-pd">
         <label className="form-label form-input" htmlFor="startYear">
           Start Year&nbsp;
         </label>
@@ -90,7 +90,7 @@ function NewPostForm({ onNewPost }) {
           <ErrorMsg>{formik.errors.startYear}</ErrorMsg>
         )}
       </div>
-      <div className="">
+      <div className="inputs-pd">
         <label className="form-label" htmlFor="description">
           Description&nbsp;
         </label>

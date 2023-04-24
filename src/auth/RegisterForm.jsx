@@ -40,7 +40,7 @@ function RegisterForm({ onSubmit }) {
   return (
     <form onSubmit={formik.handleSubmit}>
       <div>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">email</label>
         <input
           id="email"
           type="text"
@@ -52,7 +52,7 @@ function RegisterForm({ onSubmit }) {
         {formik.touched.email && formik.errors.email ? <div>{formik.errors.email}</div> : null}
       </div>
       <div>
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">password</label>
         <input
         className="form-input"
           id="password"
@@ -66,12 +66,9 @@ function RegisterForm({ onSubmit }) {
           <div>{formik.errors.password}</div>
         ) : null}
       </div>
-      <button type="submit">
+      <button type="submit" className="sign">
       Register
       </button>
-      {/* <button onClick={handleRegister} type="submit">
-        Registruotis
-      </button> */}
     </form>
   );
 }
