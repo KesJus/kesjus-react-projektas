@@ -1,4 +1,5 @@
 # kesjus-react-projektas:
+# talpinims: https://parts4.shop/
 
 # stiliai
 # npm i vite@latest
