@@ -1,5 +1,6 @@
-# kesjus-react-projektas:
-# talpinims: https://parts4.shop/
+# kesjus-react-projektas: Mad Frogs Shop - parduotuvė Freelacer-iams
+# patalpintas: https://parts4.shop/
+
 
 # stiliai
 # npm i vite@latest
