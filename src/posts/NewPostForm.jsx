@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useAuthCtx } from "../auth/AuthProvider";
-import './form.css'
+
 function NewPostForm({ onNewPost }) {
   const { user } = useAuthCtx();
   const ErrorMsg = "error";

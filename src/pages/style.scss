@@ -2,10 +2,8 @@ header,
 footer {
   // background-color: rgba(0, 128, 0, 0.993);
   // background-color: rgb(69 74 69 / 99%);
-
   // Register --hos-color-amber-050: #ffae00;
   // Required field --hos-color-red-070: #ff6966;
-
   background-color: #2f353c;
   color: #eee;
 
@@ -24,19 +22,6 @@ footer {
 
     display: inline-block;
   }
-  // nav:hover {
-  //   background-color: rgb(80, 80, 74);
-  //   // background-color: rgba(0, 128, 0, 0.226);
-  // }
-  // .navItem:hover {
-  //   background-color: rgba(0, 128, 0, 0.226);
-  // }
-  // h2 {
-  //   // color: yellow;
-  //   color: #ffae00;
-  //   color: #ffd500;
-  // }
-
   a {
     // padding-left: 1rem;
     padding: 0.6rem;
@@ -76,28 +61,24 @@ ul {
   form {
     padding-right: 1rem;
   }
+  .form-label {
+    // color: #646cff;
+    font-size: 12px;
+  }
   .hov {
     padding: 0;
   }
   header .container {
-    padding-top:2px;
-    padding-bottom:2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
-  // .w3-container {
-  //   max-width: 280px;
-  //   /* max-height:auto; */
-  //   display: block;
-  //   margin: 0 auto;
-  //   width: 100%;
-  //   transform: translateY(14%);
-  // }
-  .w3-container img{
+  .w3-container img {
     display: none;
   }
- .form-control, .inputs-pd{
+  .form-control,
+  .inputs-pd {
     padding: 0;
   }
- 
   // }
   // @media only screen and (max-width: 360px) {
   nav {

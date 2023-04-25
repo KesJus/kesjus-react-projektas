@@ -8,8 +8,7 @@ img {
 
 button {
   cursor: pointer;
-  box-shadow: 0 0 10px #719ECE;
-
+  box-shadow: 0 0 10px #719ece;
 }
 
 a {
@@ -22,7 +21,7 @@ a {
   padding-right: 50px;
   /* apridboti tik maximalu ploti */
   max-width: 80rem;
-  /* skaiciuoti parastes automatiskai vienodai is kaires ir is desines */
+  /* parastes automatiskai - vienodai is kaires ir desines */
   margin: 0 auto;
 }
 #root {
@@ -48,25 +47,24 @@ div {
   padding-bottom: 0.7rem;
 }
 
-
-input:focus { 
+input:focus {
   outline: none !important;
-  border-color: #719ECE;
-  box-shadow: 0 0 10px #719ECE;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
 }
-textarea:focus { 
+textarea:focus {
   outline: none !important;
-  border-color: #719ECE;
-  box-shadow: 0 0 10px #719ECE;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
 }
 h3
-/* , .form-control */
-{
-  color:#ff6966;
+/* , .form-control */ {
+  color: #ff6966;
 }
 /* loadin */
-h4, .text{
-  color: #719ECE;
+h4,
+.text {
+  color: #719ece;
   font-weight: normal;
 }
 

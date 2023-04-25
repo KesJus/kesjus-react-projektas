@@ -1,24 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useAuthCtx } from "../auth/AuthProvider";
-import { deleteDoc, doc } from "@firebase/firestore";
 import { db } from "../auth/firebase";
-import { toast } from "react-hot-toast";
-
 import { collection, orderBy, query } from "firebase/firestore";
 import { useEffect } from "react";
 import { useCollection } from "react-firebase-hooks/firestore";
-// import { db } from '../firebase/firebase';
 
 function SingleListsPost({ item }) {
-  // parsiusti postus
-  // const postCollRef = collection(db, "posts");
+  // parsiusti
   const postCollRef = collection(db, "shops");
-  // rodo tik i6 hook Posts
-  // const postCollRef = collection(db, "hookPosts");
   const q = query(postCollRef, orderBy("town", "desc"));
   const [value, loading, error] = useCollection(q);
-  // console.log("value ===", value);
   const docsWithUid = value && value.docs.map((doc) => ({ uid: doc.id, ...doc.data() }));
   useEffect(() => {}, []);
   console.log("docsWithUid ===", docsWithUid);

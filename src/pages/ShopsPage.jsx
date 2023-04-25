@@ -1,63 +1,29 @@
-import {
-  collection,
-  deleteDoc,
-  doc,
-  orderBy,
-  query,
-  where,
-} from 'firebase/firestore';
-import { useEffect, useState } from 'react';
-import { useCollection } from 'react-firebase-hooks/firestore';
-import { db } from '../auth/firebase';
-import SingleListsPost from '../posts/SingleListsPost';
-import Loader from '../ui/loader/Loader';
+import { collection, orderBy, query, where } from "firebase/firestore";
+import { useState } from "react";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { db } from "../auth/firebase";
+import SingleListsPost from "../posts/SingleListsPost";
+import Loader from "../ui/loader/Loader";
 
 function ShopsPage() {
-  const [filerVal, setFilerVal] = useState('all');
-  // parsiusti postus
-  const postCollRef = collection(db, 'shops');
-  // const postCollRef = collection(db, 'posts');
-console.log('postCollRef ===', postCollRef);
+  const [filerVal, setFilerVal] = useState("all");
+  // parsiusti
+  const postCollRef = collection(db, "shops");
+  console.log("postCollRef ===", postCollRef);
   // const q = query(postCollRef, orderBy('author', 'desc'));
   const q =
-    filerVal === 'all'
-      ? query(postCollRef, orderBy('author', 'desc'))
-      : query(postCollRef, where('tags', 'array-contains', filerVal));
-
+    filerVal === "all"
+      ? query(postCollRef, orderBy("author", "desc"))
+      : query(postCollRef, where("tags", "array-contains", filerVal));
   const [value, loading, error] = useCollection(q);
-  // console.log('value ===', value);
-  const docsWithUid =
-    value && value.docs.map((doc) => ({ uid: doc.id, ...doc.data() }));
-// console.log('doc.data ===', doc.data);
-    console.log('docsWithUid ===', docsWithUid);
+  const docsWithUid = value && value.docs.map((doc) => ({ uid: doc.id, ...doc.data() }));
+  console.log("docsWithUid ===", docsWithUid);
   return (
     <div className="container">
-    <p><em>you can see all of shops here</em></p>
-    <Loader show={loading} />
-      {/* <button
-        className="btn btn-outline-dark btn-sm"
-        onClick={() => setFilerVal('all')}
-      >
-        Shops page
-      </button> */}
-      {/* <button
-        className="btn btn-outline-dark btn-sm"
-        onClick={() => setFilerVal('css')}
-      >
-        css
-      </button>
-      <button
-        className="btn btn-outline-dark btn-sm"
-        onClick={() => setFilerVal('boxing')}
-      >
-        boxing
-      </button>
-      <button
-        className="btn btn-outline-dark btn-sm"
-        onClick={() => setFilerVal('kazkas')}
-      >
-        kazkas
-      </button> */}
+      <p>
+        <em>you can see all of shops here</em>
+      </p>
+      <Loader show={loading} />
       <ul className="list-group">
         {value &&
           docsWithUid.map((pObj) => (
@@ -69,6 +35,5 @@ console.log('postCollRef ===', postCollRef);
     </div>
   );
 }
-
 
 export default ShopsPage;

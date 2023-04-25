@@ -17,14 +17,10 @@
 a,
 footer {
   font-weight: 500;
-  /* color: #646cff; */
-  /* color: yellow; */
   color: #ffd500;
-  /* color: #ffae00; ; */
   text-decoration: inherit;
 }
 a:not(.logos, .logout):hover {
-  /* color: #535bf2; */
   color: #ffcd66;
   border: 1px solid #ffcd66;
   border-radius: 0.6rem;
@@ -82,10 +78,9 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.sign{
+.sign {
   margin-top: 2rem;
 }
-
 
 ul {
   list-style-type: none;
@@ -93,16 +88,17 @@ ul {
 
 /* form control */
 .form-label {
-  color: #646cff;
+  color: #719ece;
 }
 .form-control {
   color: #646cff;
+  color: #719ece;
   border-color: #719ece;
   font-size: large;
   /* box-shadow: 0 0 10px #719ECE; */
 }
-error {
-  color: red;
+.error {
+  color: #ff6966;
 }
 input,
 .form,
@@ -132,8 +128,6 @@ form {
   margin-right: auto;
   /* text-align: left; */
   padding-left: 1rem;
-  /* text-align: center; */
-  /* paddding-bottom: 10px; */
 }
 @media (prefers-color-scheme: light) {
   :root {

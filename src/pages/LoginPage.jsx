@@ -15,23 +15,16 @@ function LoginPage() {
     const rez = signInWithEmailAndPassword(email, password).then(() => {
       toast.success("Login success");
     });
-
-    // console.log('rez ===', rez);
-    // toast.promise(rez, {
-    //   loading: 'Loading',
-    //   success: 'Login success',
-    //   error: 'Error when loging in',
-    // });
   }
 
-  // console.log("user ===", user);
   return (
     <div className="container">
-      {/* <Main /> */}
       <div className="head">
-        <h2>. . .</h2> </div>
-        <h4><em>Log in to our Shop</em></h4>
-     
+        <h2>. . .</h2>{" "}
+      </div>
+      <h4>
+        <em>Log in to our Shop</em>
+      </h4>
       {error && <h3>not suitable, try again, or register</h3>}
       {loading && <h2>Loading...</h2>}
       {user && <h4>You are logged in as {user.user.email} </h4>}

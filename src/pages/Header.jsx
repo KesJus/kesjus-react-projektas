@@ -20,7 +20,7 @@ function Header() {
               <NavLink className="" to={"/shop"}>
                 Shops
               </NavLink>
-              
+
               <NavLink className="" to={"/add"}>
                 Add-shop
               </NavLink>
