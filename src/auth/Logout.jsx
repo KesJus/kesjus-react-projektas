@@ -1,6 +1,6 @@
-import { useSignOut } from 'react-firebase-hooks/auth';
-import { useAuthCtx } from '../auth/AuthProvider';
-import { auth } from '../auth/firebase';
+import { useSignOut } from "react-firebase-hooks/auth";
+import { useAuthCtx } from "../auth/AuthProvider";
+import { auth } from "../auth/firebase";
 
 function Logout() {
   const { isLoggedIn } = useAuthCtx();
@@ -11,7 +11,6 @@ function Logout() {
   }
 
   return !isLoggedIn ? null : (
-    // <button className="btn btn-outline-info" onClick={logoutFire}>
     <button className="btn btn-outline-info logout" onClick={logoutFire}>
       Logout
     </button>

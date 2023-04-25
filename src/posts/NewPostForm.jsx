@@ -35,7 +35,7 @@ function NewPostForm({ onNewPost }) {
       };
       console.log("newPost ===", newPost);
       onNewPost(newPost);
-      // Code to submit the new post data to the server here
+      // Code to submit the new post data to the server
     },
   });
 

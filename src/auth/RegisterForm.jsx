@@ -1,10 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
-
-import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-hot-toast";
-// import firebase from "../firebase";
-// import "firebase/auth";
 
 function RegisterForm({ onSubmit }) {
   const formik = useFormik({
@@ -18,24 +14,6 @@ function RegisterForm({ onSubmit }) {
       toast.success('Register success');
     },
   });
-
-  // function handleRegister() {
-  //   console.log("pakartokite slaptažodį");
-  //   return;
-  //   // <button onClick={handlePassword} type="submit"></button>
-  // }
-
-  function handleSubmit() {
-    // const auth = firebase.auth();
-    // const [user, loading, error] = useAuthState(auth);
-    // if (loading) {
-    //   return <p>Loading...</p>;
-    // }
-
-    // if (error) {
-    //   return
-    console.log("autentifikuojame...");
-  }
 
   return (
     <form onSubmit={formik.handleSubmit}>

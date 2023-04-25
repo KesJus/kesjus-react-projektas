@@ -1,7 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-// import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-hot-toast";
 
 function LoginForm({ onLogin }) {

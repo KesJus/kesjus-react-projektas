@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from './firebase';
+import { createContext, useContext, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase";
 
 const AuthContext = createContext({
   user: {},
@@ -10,15 +10,14 @@ const AuthContext = createContext({
   isLoggedIn: false,
 });
 
-// pervadinti AuthContext
-AuthContext.displayName = 'Autentifikacija';
+AuthContext.displayName = "Autentifikacija";
 
 function AuthProvider({ children }) {
   // const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [user, userLoading, userError] = useAuthState(auth);
   const isLoggedIn = !!user;
-  console.log('isLoggedIn ===', isLoggedIn);
+  console.log("isLoggedIn ===", isLoggedIn);
   // function login(newUser) {
   //   setUser(newUser);
   // }
@@ -28,9 +27,7 @@ function AuthProvider({ children }) {
     isLoading,
     isLoggedIn,
   };
-  return (
-    <AuthContext.Provider value={authCtx}>{children}</AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={authCtx}>{children}</AuthContext.Provider>;
 }
 
 export default AuthProvider;
