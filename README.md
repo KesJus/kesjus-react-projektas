@@ -1,7 +1,7 @@
 # kesjus-react-projektas: Mad Frogs Shop
 # parduotuvė Freelancer-iams dalintis idėjomis
 
-# patalpintas: https://parts4.shop/
+# patalpintas: https://parts4.shop/ ir https://madfrog.netlify.app/
 # nuorodos: PayPal.me ir AddTodo
 
 # stiliai
